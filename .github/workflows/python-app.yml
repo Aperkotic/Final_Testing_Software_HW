@@ -34,8 +34,9 @@ jobs:
         
     - name: Start Web server
       run: |
-        python3 -m http.server 8000 &
-        sleep 3
+        cd dist
+        python -m http.server 8000 &
+        sleep 5
         
     - name: Run selenium tests
       run: |
